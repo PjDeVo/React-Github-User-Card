@@ -4,6 +4,7 @@ import axios from "axios";
 
 import Card from "./Card";
 import "./App.css";
+import Header from "./Header";
 
 class App extends React.Component {
   constructor() {
@@ -34,13 +35,15 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header"></header>
-        <Card
-          bio={this.state.bio}
-          user={this.state.user}
-          image={this.state.imageUrl}
-          name={this.state.name}
-        />
+        <Header />
+        <div className="app-container">
+          <Card
+            bio={this.state.bio}
+            user={this.state.user}
+            image={this.state.imageUrl}
+            name={this.state.name}
+          />
+        </div>
       </div>
     );
   }
